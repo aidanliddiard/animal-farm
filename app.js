@@ -5,10 +5,9 @@ const main = document.querySelector('main');
 
 for (let animal of animals) {
     const animalDiv = renderListItem(animal);
+
     const a = document.createElement('a');
     a.href = `/animals/?id=${animal.id}`;
-    a.textContent = animal.name;
-    main.append(animalDiv, a);
-
-
+    a.append(animalDiv);
+    main.append(a);
 }
